@@ -4,17 +4,17 @@ import org.testng.annotations.Test;
 import pages.HomePage;
 import util.ReadProperties;
 
-public class AddRemoveElementsTest {
+public class BasicAuthTest {
     HomePage page = new HomePage();
 
     @BeforeMethod
     public void initDriver() {
-        page.openUrl(ReadProperties.readConfigUrl() + "/add_remove_elements/");
+        page.openUrlWithCreds(ReadProperties.readConfigUrl() + "/basic_auth", "admin:admin");
     }
 
     @Test
-    public void addRemoveElementsTest() {
-        page.AddRemoveElements();
+    public void basicAuthTest() {
+        page.loginBasicAuth();
     }
 
     @AfterMethod

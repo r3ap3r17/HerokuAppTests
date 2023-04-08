@@ -7,7 +7,7 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class DriverUtils {
-    protected static WebDriver driver;
+    public static WebDriver driver;
 
     // Used in combination with WebDriverManager
     public static void initDriver() {

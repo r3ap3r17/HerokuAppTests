@@ -1,6 +1,7 @@
 package util;
 
 import data.Timeouts;
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -13,6 +14,7 @@ import javax.imageio.ImageIO;
 import java.io.File;
 import java.io.IOException;
 import java.time.Duration;
+import java.util.List;
 
 import static util.DriverUtils.driver;
 
@@ -56,19 +58,32 @@ public class BaseActions {
             System.out.println(e.getMessage());
         }
     }
-    public void init() {
-        DriverUtils.initDriver();
-        DriverUtils.configDriver();
-    }
     // Initialises and configure WebDriver
     public void openUrl(String URL) {
         counter = 1;
+        DriverUtils.initDriver();
+        DriverUtils.configDriver();
         driver.get(URL);
+    }
+    // Send Auth Params
+    public void openUrlWithCreds(String URL, String auth) {
+        // Split the URL into two parts: the scheme (https://)
+        int schemeIndex = URL.indexOf("://");
+        // Append the authentication information after the scheme
+        String urlWithAuth = URL.substring(0, schemeIndex + 3) + auth + "@" + URL.substring(schemeIndex + 3);
+        System.out.println(urlWithAuth);
+        this.openUrl(urlWithAuth);
     }
     // Closes WebDriver
     public void closeDriver() {
         takeScreenShotBeforeClosing();
         driver.quit();
+    }
+    // Waits for URL to change
+    public void waitForUrlChange(String url, Integer... time) {
+        int timeout = (time.length > 0) ? time[0] : Timeouts.TIMEOUT_MEDIUM;
+        wait = new WebDriverWait(driver, Duration.ofSeconds(timeout));
+        wait.until(ExpectedConditions.urlContains(url));
     }
     // Waits until element is visible and returns WebElement obj
     protected WebElement waitForElementToBeVisible(By locator, Integer... time) {
@@ -88,15 +103,22 @@ public class BaseActions {
         wait = new WebDriverWait(driver, Duration.ofSeconds(timeout));
         wait.until(ExpectedConditions.invisibilityOfElementLocated(locator));
     }
-    // Waits for URL to change
-    public void waitForUrlChange(String url, Integer... time) {
+    // Waits for element to be visible than returns a list of WebElements
+    protected List<WebElement> waitForVisibleElements(By lcoator, Integer... time) {
         int timeout = (time.length > 0) ? time[0] : Timeouts.TIMEOUT_MEDIUM;
         wait = new WebDriverWait(driver, Duration.ofSeconds(timeout));
-        wait.until(ExpectedConditions.urlContains(url));
+        return wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(lcoator));
     }
     // Clicks WebElement
     protected void clickElement(By locator) {
         element = waitForElementToBeVisible(locator);
         element.click();
+    }
+    // Waits, then returns Alert
+    protected Alert switchToAlert(Integer... time) {
+        int timeout = (time.length > 0) ? time[0] : Timeouts.TIMEOUT_MEDIUM;
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeout));
+        wait.until(ExpectedConditions.alertIsPresent());
+        return driver.switchTo().alert();
     }
 }

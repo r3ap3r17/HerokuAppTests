@@ -3,6 +3,7 @@ package data;
 import org.openqa.selenium.By;
 
 public class Locators {
+    // There is 44 Links in total - https://the-internet.herokuapp.com
     // https://the-internet.herokuapp.com/add_remove_elements/
     public static final By addButton = By.xpath("//button[text()='Add Element']");
     public static final By removeButton = By.xpath("//button[text()='Delete']");
@@ -22,4 +23,7 @@ public class Locators {
 
     // https://the-internet.herokuapp.com/checkboxes
     public static final By checkboxes = By.xpath("//form[@id='checkboxes']//input");
+
+    // https://the-internet.herokuapp.com/context_menu
+    public static final By rightClickBox = By.xpath("//div[@id='hot-spot']");
 }

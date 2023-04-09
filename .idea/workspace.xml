@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e1669cca-9564-4b77-9e21-19c843e7d415" name="Changes" comment="Added BrokenImagesTest">
-      <change afterPath="$PROJECT_DIR$/src/test/java/CheckboxesTest.java" afterDir="false" />
+    <list default="true" id="e1669cca-9564-4b77-9e21-19c843e7d415" name="Changes" comment="Added CheckboxesTest">
+      <change afterPath="$PROJECT_DIR$/src/test/java/ContextMenuTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/data/CommonStrings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data/CommonStrings.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/data/Locators.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data/Locators.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/HomePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/util/BaseActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/util/BaseActions.java" afterDir="false" />
@@ -48,33 +48,11 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.completion&quot;
   }
 }</component>
-  <component name="RunManager" selected="TestNG.&lt;default&gt;">
+  <component name="RunManager" selected="TestNG.ContextMenuTest">
     <configuration name="AddRemoveElementsTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="HerokuAppTests" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="AddRemoveElementsTest" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="BrokenImagesTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="HerokuAppTests" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="BrokenImagesTest" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ChallengingDOMTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="HerokuAppTests" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="ChallengingDOMTest" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -93,6 +71,29 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ContextMenuTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="HerokuAppTests" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="ContextMenuTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ContextMenuTest.contextMenuTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="HerokuAppTests" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="ContextMenuTest" />
+      <option name="METHOD_NAME" value="contextMenuTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="&lt;default&gt;" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="HerokuAppTests" />
       <option name="PACKAGE_NAME" value="" />
@@ -105,11 +106,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.ContextMenuTest" />
         <item itemvalue="TestNG.&lt;default&gt;" />
-        <item itemvalue="TestNG.CheckboxesTest" />
-        <item itemvalue="TestNG.ChallengingDOMTest" />
         <item itemvalue="TestNG.AddRemoveElementsTest" />
-        <item itemvalue="TestNG.BrokenImagesTest" />
+        <item itemvalue="TestNG.CheckboxesTest" />
+        <item itemvalue="TestNG.ContextMenuTest.contextMenuTest" />
       </list>
     </recent_temporary>
   </component>
@@ -150,7 +151,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681056661451</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Added CheckboxesTest">
+      <created>1681059859638</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1681059859638</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -169,6 +177,7 @@
     <MESSAGE value="New Methods Added to BaseActions" />
     <MESSAGE value="Added AddRemoveElementsTest and BasicAuthTest" />
     <MESSAGE value="Added BrokenImagesTest" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added BrokenImagesTest" />
+    <MESSAGE value="Added CheckboxesTest" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added CheckboxesTest" />
   </component>
 </project>

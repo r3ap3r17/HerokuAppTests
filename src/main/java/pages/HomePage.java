@@ -1,5 +1,6 @@
 package pages;
 
+import data.CommonStrings;
 import data.Locators;
 import net.sourceforge.tess4j.ITesseract;
 import net.sourceforge.tess4j.Tesseract;
@@ -75,5 +76,13 @@ public class HomePage extends BaseActions {
                 comment("clicked checkbox");
             }
         }
+    }
+    // Right-clicks in box area, then checks if alert is present before closing it
+    public void openAndCloseContextMenu() {
+        rightClickElement(Locators.rightClickBox);
+        comment("user right-clicked box area");
+        Assert.assertEquals(switchToAlert().getText(), CommonStrings.contextMenuMessage);
+        switchToAlert().accept();
+        comment("user clicked ok in alert box");
     }
 }

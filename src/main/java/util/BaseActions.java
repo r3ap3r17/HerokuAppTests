@@ -4,6 +4,7 @@ import data.Timeouts;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import ru.yandex.qatools.ashot.AShot;
@@ -130,6 +131,12 @@ public class BaseActions {
     protected void clickElement(By locator) {
         element = waitForElementToBeVisible(locator);
         element.click();
+    }
+    // Right-Clicks WebElement
+    protected void rightClickElement(By locator) {
+        element = waitForElementToBeVisible(locator);
+        Actions actions = new Actions(driver);
+        actions.contextClick(element).perform();
     }
     // Waits, then returns Alert
     protected Alert switchToAlert(Integer... time) {

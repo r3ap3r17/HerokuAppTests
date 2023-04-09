@@ -5,7 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e1669cca-9564-4b77-9e21-19c843e7d415" name="Changes" comment="Added AddRemoveElementsTest and BasicAuthTest">
+      <change afterPath="$PROJECT_DIR$/src/test/java/ChallengingDOMTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/data/Locators.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data/Locators.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/HomePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/util/BaseActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/util/BaseActions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/BrokenImagesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/BrokenImagesTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +49,7 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.completion&quot;
   }
 }</component>
-  <component name="RunManager" selected="TestNG.&lt;default&gt;">
+  <component name="RunManager" selected="TestNG.ChallengingDOMTest">
     <configuration name="AddRemoveElementsTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="HerokuAppTests" />
       <option name="PACKAGE_NAME" value="" />
@@ -66,6 +72,28 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="BrokenImagesTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="HerokuAppTests" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="BrokenImagesTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ChallengingDOMTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="HerokuAppTests" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="ChallengingDOMTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="&lt;default&gt;" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="HerokuAppTests" />
       <option name="PACKAGE_NAME" value="" />
@@ -78,7 +106,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.ChallengingDOMTest" />
         <item itemvalue="TestNG.&lt;default&gt;" />
+        <item itemvalue="TestNG.BrokenImagesTest" />
         <item itemvalue="TestNG.BasicAuthTest" />
         <item itemvalue="TestNG.AddRemoveElementsTest" />
       </list>
@@ -107,7 +137,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680978403160</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Added AddRemoveElementsTest and BasicAuthTest">
+      <created>1680979991341</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1680979991341</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

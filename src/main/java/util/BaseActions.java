@@ -38,6 +38,18 @@ public class BaseActions {
             System.out.println(e.getMessage());
         }
     }
+    // Screenshot specific element
+    public void takeScreenShotOfElement(By locator, String fileName) {
+        System.out.println(fileName);
+        try {
+            File file = new File(ReadProperties.readConfigScreenShotDirPath() + "/" + fileName + ".png");
+            Screenshot myScreenshot = new AShot().shootingStrategy(ShootingStrategies
+                    .viewportPasting(100)).takeScreenshot(driver, waitForElementToBeVisible(locator));
+            ImageIO.write(myScreenshot.getImage(),"PNG", file);
+        } catch (IOException e) {
+            System.out.println(e.getMessage());
+        }
+    }
     // Method Used To Take ScreenShot Before Closing Driver
     public void takeScreenShotBeforeClosing() {
         try {
@@ -103,6 +115,11 @@ public class BaseActions {
         wait = new WebDriverWait(driver, Duration.ofSeconds(timeout));
         wait.until(ExpectedConditions.invisibilityOfElementLocated(locator));
     }
+    // Returns true if element is displayed
+    public boolean verifyElementIsVisible(By locator, Integer... time) {
+        int timeout = (time.length > 0) ? time[0] : Timeouts.TIMEOUT_MEDIUM;
+        return waitForElementToBeVisible(locator, timeout).isDisplayed();
+    }
     // Waits for element to be visible than returns a list of WebElements
     protected List<WebElement> waitForVisibleElements(By lcoator, Integer... time) {
         int timeout = (time.length > 0) ? time[0] : Timeouts.TIMEOUT_MEDIUM;
@@ -120,5 +137,13 @@ public class BaseActions {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeout));
         wait.until(ExpectedConditions.alertIsPresent());
         return driver.switchTo().alert();
+    }
+    // Returns desired attribute
+    protected String getAttributeValueFromElement(By locator, String attribute) {
+        element = waitForElementToBeVisible(locator);
+        return element.getAttribute(attribute);
+    }
+    protected String getAttributeValueFromElement(WebElement element, String attribute) {
+        return element.getAttribute(attribute);
     }
 }

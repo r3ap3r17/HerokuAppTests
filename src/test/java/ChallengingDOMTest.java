@@ -4,17 +4,17 @@ import org.testng.annotations.Test;
 import pages.HomePage;
 import util.ReadProperties;
 
-public class BrokenImagesTest {
+public class ChallengingDOMTest {
     HomePage page = new HomePage();
 
     @BeforeMethod
     public void initDriver() {
-        page.openUrl(ReadProperties.readConfigUrl() + "/broken_images");
+        page.openUrl(ReadProperties.readConfigUrl() + "/challenging_dom");
     }
 
     @Test
-    public void brokenImagesTest() {
-        page.testImages();
+    public void challengingDOMTest() {
+        page.testDOMelements();
     }
 
     @AfterMethod

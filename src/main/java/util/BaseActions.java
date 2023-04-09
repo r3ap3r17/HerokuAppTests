@@ -24,6 +24,7 @@ public class BaseActions {
     private static int counter = 1;
     // Prints a comment to console
     protected void comment(String message) {
+        if (counter == 1) System.out.println("\n###### USER LOG ######");
         System.out.println("STEP " + counter + ": " + message.toUpperCase());
         counter++;
     }
@@ -40,7 +41,6 @@ public class BaseActions {
     }
     // Screenshot specific element
     public void takeScreenShotOfElement(By locator, String fileName) {
-        System.out.println(fileName);
         try {
             File file = new File(ReadProperties.readConfigScreenShotDirPath() + "/" + fileName + ".png");
             Screenshot myScreenshot = new AShot().shootingStrategy(ShootingStrategies

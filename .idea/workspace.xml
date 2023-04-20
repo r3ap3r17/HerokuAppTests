@@ -4,11 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e1669cca-9564-4b77-9e21-19c843e7d415" name="Changes" comment="Added CheckboxesTest">
-      <change afterPath="$PROJECT_DIR$/src/test/java/ContextMenuTest.java" afterDir="false" />
+    <list default="true" id="e1669cca-9564-4b77-9e21-19c843e7d415" name="Changes" comment="Added ContextMenuTest">
+      <change afterPath="$PROJECT_DIR$/src/test/java/DragAndDropTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/EntryAdTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/HiddenElementTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/MoveMouseOutsideViewportTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/NonExistingElementTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/SelectOptionsTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/data/CommonStrings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data/CommonStrings.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/data/Locators.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data/Locators.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/data/Timeouts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data/Timeouts.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/HomePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/util/BaseActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/util/BaseActions.java" afterDir="false" />
     </list>
@@ -38,21 +43,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;F:/Coding_Projects/software_testing/qa projects/officeassistant-ui-automation&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.completion&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "F:/Coding_Projects/software_testing/qa projects/officeassistant-ui-automation",
+    "settings.editor.selected.configurable": "Console"
   }
-}</component>
-  <component name="RunManager" selected="TestNG.ContextMenuTest">
-    <configuration name="AddRemoveElementsTest" type="TestNG" temporary="true" nameIsGenerated="true">
+}]]></component>
+  <component name="RunManager" selected="TestNG.&lt;default&gt;">
+    <configuration name="EntryAdTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="HerokuAppTests" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="AddRemoveElementsTest" />
+      <option name="MAIN_CLASS_NAME" value="EntryAdTest" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -60,10 +65,10 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CheckboxesTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="HiddenElementTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="HerokuAppTests" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="CheckboxesTest" />
+      <option name="MAIN_CLASS_NAME" value="HiddenElementTest" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -71,10 +76,10 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ContextMenuTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="MoveMouseOutsideViewportTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="HerokuAppTests" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="ContextMenuTest" />
+      <option name="MAIN_CLASS_NAME" value="MoveMouseOutsideViewportTest" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -82,12 +87,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ContextMenuTest.contextMenuTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="NonExistingElementTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="HerokuAppTests" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="ContextMenuTest" />
-      <option name="METHOD_NAME" value="contextMenuTest" />
-      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="MAIN_CLASS_NAME" value="NonExistingElementTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
       <method v="2">
@@ -106,11 +110,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.ContextMenuTest" />
         <item itemvalue="TestNG.&lt;default&gt;" />
-        <item itemvalue="TestNG.AddRemoveElementsTest" />
-        <item itemvalue="TestNG.CheckboxesTest" />
-        <item itemvalue="TestNG.ContextMenuTest.contextMenuTest" />
+        <item itemvalue="TestNG.MoveMouseOutsideViewportTest" />
+        <item itemvalue="TestNG.EntryAdTest" />
+        <item itemvalue="TestNG.NonExistingElementTest" />
+        <item itemvalue="TestNG.HiddenElementTest" />
       </list>
     </recent_temporary>
   </component>
@@ -158,7 +162,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681059859638</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Added ContextMenuTest">
+      <created>1681063013637</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1681063013637</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -178,6 +189,7 @@
     <MESSAGE value="Added AddRemoveElementsTest and BasicAuthTest" />
     <MESSAGE value="Added BrokenImagesTest" />
     <MESSAGE value="Added CheckboxesTest" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added CheckboxesTest" />
+    <MESSAGE value="Added ContextMenuTest" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added ContextMenuTest" />
   </component>
 </project>

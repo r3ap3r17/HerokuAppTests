@@ -6,10 +6,12 @@ import net.sourceforge.tess4j.ITesseract;
 import net.sourceforge.tess4j.Tesseract;
 import net.sourceforge.tess4j.TesseractException;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import util.BaseActions;
 import util.ReadProperties;
 
+import java.awt.*;
 import java.io.File;
 
 public class HomePage extends BaseActions {
@@ -85,4 +87,55 @@ public class HomePage extends BaseActions {
         switchToAlert().accept();
         comment("user clicked ok in alert box");
     }
+    // Drags element, than asserts that element was dragged
+    public void dragAndDrop() {
+        Assert.assertEquals(getTextFromElement(Locators.aContainer), "A");
+        dragAndDropElement(Locators.aContainer, Locators.bContainer);
+        Assert.assertEquals(getTextFromElement(Locators.bContainer), "A");
+    }
+    // Clicks all options from select
+    public void clickAllSelectOptions() {
+        int options = getAllOptions(Locators.select);
+        for (int i = 0; i < options; i++) {
+            selectOptionByIndex(Locators.select, i);
+            comment(String.format("user clicked select option [%d]", i));
+        }
+    }
+
+    // Waits for element to be visible to user
+    public void testHiddenElement() {
+        clickElement(Locators.showElementBtn);
+        comment("user clicked show button");
+        waitToBeVisible(Locators.hiddenElement);
+    }
+
+    // Waits for element to be present in DOM
+    public void testNonExistingElement() {
+        clickElement(Locators.showElementBtn);
+        comment("user clicked show button");
+        waitToBePresent(Locators.hiddenElement);
+        // waitToBeVisible can be used in both cases
+    }
+
+    // Closes the Ad and then clicks desired element
+    public void dealWithEntryAdd() {
+        waitForPageToLoad();
+        // sleep();
+        closeAdAndClickElement(Locators.restartAdBtn, Locators.modalBtn);
+    }
+    // Moves mouse outside of viewport
+    private void moveMouseOutsideViewport() {
+        try {
+            Robot robot = new Robot();
+            robot.mouseMove(0, -5000);
+        } catch (AWTException e) {
+            System.out.println("Error: " + e);
+        }
+    }
+    // Checks if modal appears when mouse is out of viewport
+    public void testMouseFromViewport() {
+        moveMouseOutsideViewport();
+        waitToBeVisible(Locators.mouseMoveModal);
+    }
+
 }

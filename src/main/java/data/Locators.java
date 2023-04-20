@@ -26,4 +26,22 @@ public class Locators {
 
     // https://the-internet.herokuapp.com/context_menu
     public static final By rightClickBox = By.xpath("//div[@id='hot-spot']");
+
+    // https://the-internet.herokuapp.com/drag_and_drop
+    public static final By aContainer = By.xpath("//div[@id='column-a']");
+    public static final By bContainer = By.xpath("//div[@id='column-b']");
+
+    // https://the-internet.herokuapp.com/dropdown
+    public static final By select = By.xpath("//select[@id='dropdown']");
+
+    // https://the-internet.herokuapp.com/dynamic_loading/
+    public static final By showElementBtn = By.xpath("//div[@id='start']/button");
+    public static final By hiddenElement = By.xpath("//div[@id='finish']/h4[text()='Hello World!']");
+
+    // https://the-internet.herokuapp.com/entry_ad
+    public static final By modalBtn = By.xpath("//div[@id='modal']//p[text()='Close']");
+    public static final By restartAdBtn = By.xpath("//a[@id='restart-ad']");
+
+    // https://the-internet.herokuapp.com/exit_intent
+    public static final By mouseMoveModal = By.xpath("//div[@id='ouibounce-modal']");
 }

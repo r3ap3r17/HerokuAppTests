@@ -20,9 +20,9 @@ import java.util.List;
 import static util.DriverUtils.driver;
 
 public class BaseActions {
-    protected static WebDriverWait wait;
-    protected static WebElement element;
-    protected static Select select;
+    private static WebDriverWait wait;
+    private static WebElement element;
+    private static Select select;
     private static int counter = 1;
     // Prints a comment to console
     protected void comment(String message) {
@@ -234,5 +234,12 @@ public class BaseActions {
     }
     protected String getAttributeValueFromElement(WebElement element, String attribute) {
         return element.getAttribute(attribute);
+    }
+    // Scrolls to the bottom of the page
+    protected void scrollToBottom() {
+        ((JavascriptExecutor) driver).executeScript("window.scrollTo(0, document.body.scrollHeight)");
+    }
+    protected int getViewportHeight() {
+        return Integer.parseInt(((JavascriptExecutor) driver).executeScript("return window.innerHeight").toString());
     }
 }

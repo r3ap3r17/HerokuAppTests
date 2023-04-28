@@ -6,8 +6,8 @@ import net.sourceforge.tess4j.ITesseract;
 import net.sourceforge.tess4j.Tesseract;
 import net.sourceforge.tess4j.TesseractException;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Point;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import util.BaseActions;
 import util.ReadProperties;
@@ -162,5 +162,22 @@ public class HomePage extends BaseActions {
         By fileLink = By.xpath(String
                 .format("//div[@id='content']//a[@href='download/%s']", extractFileName(uploadFilePath)));
         waitToBeVisible(fileLink);
+    }
+    public boolean isElementVisibleAfterScrollingToBottom(By locator) {
+        // Check if the element is within the visible viewport
+        WebElement element = waitForElementToBeVisible(locator);
+        int viewportHeight = getViewportHeight();
+        Point elementLocation = element.getLocation();
+        int elementTop = elementLocation.getY();
+        int elementBottom = elementTop + element.getSize().getHeight();
+        return !(elementTop >= 0 && elementTop < viewportHeight || elementBottom > 0 && elementBottom <= viewportHeight);
+    }
+
+    // Checks if floating menu is present when scrolled to bottom
+    public void testFloatingMenu() {
+        scrollToBottom();
+        comment("user scrolled to the bottom of the page");
+        Assert.assertFalse(isElementVisibleAfterScrollingToBottom(Locators.testTitleLocator));
+        Assert.assertTrue(isElementVisibleAfterScrollingToBottom(Locators.floatingMenu));
     }
 }

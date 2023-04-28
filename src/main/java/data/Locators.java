@@ -50,5 +50,7 @@ public class Locators {
     public static final By uploadSubmit = By.xpath("//input[@id='file-submit']");
     public static final By uploadedFileContainer = By.xpath("//div[@id='uploaded-files']");
 
-    // https://the-internet.herokuapp.com/download
+    // https://the-internet.herokuapp.com/floating_menu
+    public static final By testTitleLocator = By.xpath("//h3[normalize-space()='Floating Menu']");
+    public static final By floatingMenu = By.xpath("//div[@id='menu']");
 }

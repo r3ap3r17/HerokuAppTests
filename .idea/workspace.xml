@@ -4,17 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e1669cca-9564-4b77-9e21-19c843e7d415" name="Changes" comment="Added EntryAdTest, HiddenElementTest, NonExistingElementTest and MoveMouseOutsideViewportTest">
-      <change afterPath="$PROJECT_DIR$/src/test/java/FileUploadTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/UploadAndCheckDownloadsTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/testdata/upload_test_file.txt" afterDir="false" />
+    <list default="true" id="e1669cca-9564-4b77-9e21-19c843e7d415" name="Changes" comment="Added FileUploadTest and UploadAndCheckDownloadsTest">
+      <change afterPath="$PROJECT_DIR$/src/test/java/FloatingMenuTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/data/Config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data/Config.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/data/Locators.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data/Locators.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/data/Timeouts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data/Timeouts.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/HomePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/util/BaseActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/util/BaseActions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/util/ReadProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/util/ReadProperties.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,11 +54,11 @@
       <recent name="F:\Coding_Projects\software_testing\qa projects\HerokuAppTests\src\main\java\data" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.UploadAndCheckDownloadsTest">
-    <configuration name="EntryAdTest" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.FloatingMenuTest">
+    <configuration name="FileUploadTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="HerokuAppTests" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="EntryAdTest" />
+      <option name="MAIN_CLASS_NAME" value="FileUploadTest" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -71,10 +66,10 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FileUploadTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="FloatingMenuTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="HerokuAppTests" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="FileUploadTest" />
+      <option name="MAIN_CLASS_NAME" value="FloatingMenuTest" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -116,11 +111,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.FloatingMenuTest" />
         <item itemvalue="TestNG.UploadAndCheckDownloadsTest" />
         <item itemvalue="TestNG.&lt;default&gt;" />
         <item itemvalue="TestNG.FileUploadTest" />
         <item itemvalue="TestNG.MoveMouseOutsideViewportTest" />
-        <item itemvalue="TestNG.EntryAdTest" />
       </list>
     </recent_temporary>
   </component>
@@ -182,7 +177,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681995605377</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Added FileUploadTest and UploadAndCheckDownloadsTest">
+      <created>1682686535148</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1682686535148</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -204,6 +206,7 @@
     <MESSAGE value="Added CheckboxesTest" />
     <MESSAGE value="Added ContextMenuTest" />
     <MESSAGE value="Added EntryAdTest, HiddenElementTest, NonExistingElementTest and MoveMouseOutsideViewportTest" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added EntryAdTest, HiddenElementTest, NonExistingElementTest and MoveMouseOutsideViewportTest" />
+    <MESSAGE value="Added FileUploadTest and UploadAndCheckDownloadsTest" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added FileUploadTest and UploadAndCheckDownloadsTest" />
   </component>
 </project>

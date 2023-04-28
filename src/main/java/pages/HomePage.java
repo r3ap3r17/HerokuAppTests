@@ -5,6 +5,7 @@ import data.Locators;
 import net.sourceforge.tess4j.ITesseract;
 import net.sourceforge.tess4j.Tesseract;
 import net.sourceforge.tess4j.TesseractException;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
@@ -15,6 +16,12 @@ import java.awt.*;
 import java.io.File;
 
 public class HomePage extends BaseActions {
+    private final String uploadFilePath = ReadProperties.readFileForUploadPath();
+    // Method used to extract the name of the file
+    private String extractFileName(String filePath) {
+        File file = new File(filePath);
+        return file.getName();
+    }
     // Test's if image is broken or not
     private void checkIfImageIsBroken(WebElement img) {
         if (getAttributeValueFromElement(img, "naturalWidth").equals("0")) {
@@ -119,7 +126,6 @@ public class HomePage extends BaseActions {
 
     // Closes the Ad and then clicks desired element
     public void dealWithEntryAdd() {
-        waitForPageToLoad();
         // sleep();
         closeAdAndClickElement(Locators.restartAdBtn, Locators.modalBtn);
     }
@@ -132,10 +138,29 @@ public class HomePage extends BaseActions {
             System.out.println("Error: " + e);
         }
     }
-    // Checks if modal appears when mouse is out of viewport
+    // Checks if modal appears when the mouse is out of viewport
     public void testMouseFromViewport() {
         moveMouseOutsideViewport();
         waitToBeVisible(Locators.mouseMoveModal);
     }
+    // Uploads a file
+    public void testUploadButton() {
+        uploadToElement(Locators.uploadInput, uploadFilePath);
+        comment("user chose a file to upload");
+        clickElement(Locators.uploadSubmit);
+        comment("user clicked upload button");
+        String fileName = getTextFromElement(Locators.uploadedFileContainer);
+        Assert.assertEquals(fileName, extractFileName(uploadFilePath));
+    }
 
+    // Uploads a file and then checks if it exists in downloads
+    public void uploadAndCheckInDownloads() {
+        testUploadButton();
+        openNewTab(ReadProperties.readConfigUrl() + "/download");
+        switchToTab(1);
+        comment("user opened new tab " + getCurrentUrl());
+        By fileLink = By.xpath(String
+                .format("//div[@id='content']//a[@href='download/%s']", extractFileName(uploadFilePath)));
+        waitToBeVisible(fileLink);
+    }
 }

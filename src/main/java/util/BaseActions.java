@@ -14,6 +14,7 @@ import javax.imageio.ImageIO;
 import java.io.File;
 import java.io.IOException;
 import java.time.Duration;
+import java.util.ArrayList;
 import java.util.List;
 
 import static util.DriverUtils.driver;
@@ -78,6 +79,20 @@ public class BaseActions {
         DriverUtils.initDriver();
         DriverUtils.configDriver();
         driver.get(URL);
+        this.waitForPageToLoad();
+    }
+    // Returns Url from current tab
+    public String getCurrentUrl() {
+        return driver.getCurrentUrl();
+    }
+    // Opens a new tab
+    public void openNewTab(String URL) {
+        ((JavascriptExecutor) driver).executeScript(String.format("window.open('%s')", URL));
+    }
+    // Switch to desired tab
+    public void switchToTab(int index) {
+        ArrayList<String> tabs = new ArrayList<String>(driver.getWindowHandles());
+        driver.switchTo().window(tabs.get(index));
     }
     // Send Auth Params
     public void openUrlWithCreds(String URL, String auth) {
@@ -94,7 +109,7 @@ public class BaseActions {
         driver.quit();
     }
     // Waits for page to completely load
-    public void waitForPageToLoad(Integer... time) {
+    private void waitForPageToLoad(Integer... time) {
         int timeout = (time.length > 0) ? time[0] : Timeouts.TIMEOUT_MEDIUM;
         wait = new WebDriverWait(driver, Duration.ofSeconds(timeout));
         wait.until(ExpectedConditions.presenceOfElementLocated(By.tagName("body")));
@@ -152,6 +167,10 @@ public class BaseActions {
     protected void clickElement(By locator) {
         element = waitForElementToBeVisible(locator);
         element.click();
+    }
+    // Uploads a file
+    protected void uploadToElement(By locator, String path) {
+        waitForElementToBeVisible(locator).sendKeys(path);
     }
     // Tries to click element, if ad appears  closes the ad and finally clicks element
     protected void closeAdAndClickElement(By elementLocator, By closeAdLocator) {

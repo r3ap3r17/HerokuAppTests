@@ -44,4 +44,11 @@ public class Locators {
 
     // https://the-internet.herokuapp.com/exit_intent
     public static final By mouseMoveModal = By.xpath("//div[@id='ouibounce-modal']");
+
+    // https://the-internet.herokuapp.com/upload
+    public static final By uploadInput = By.xpath("//input[@id='file-upload']");
+    public static final By uploadSubmit = By.xpath("//input[@id='file-submit']");
+    public static final By uploadedFileContainer = By.xpath("//div[@id='uploaded-files']");
+
+    // https://the-internet.herokuapp.com/download
 }

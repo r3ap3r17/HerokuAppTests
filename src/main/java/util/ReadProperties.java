@@ -49,4 +49,7 @@ public class ReadProperties {
     public static String readConfigScreenShotDirPath() {
         return readConfigValues("ssdir");
     }
+    public static String readFileForUploadPath() {
+        return readConfigValues("uploadFile");
+    }
 }

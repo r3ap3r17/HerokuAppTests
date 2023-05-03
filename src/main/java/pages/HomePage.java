@@ -208,6 +208,7 @@ public class HomePage extends BaseActions {
     // Fills out form with Correct credentials
     public void testFormSuccessful() {
         submitForm(CommonStrings.USERNAME, CommonStrings.PASSWORD);
+        waitForUrlChange(ReadProperties.readConfigUrl() + "/secure");
         checkAlertMessage(CommonStrings.SUCCESS_MESSAGE);
     }
     // Logins, then logs out

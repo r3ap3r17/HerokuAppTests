@@ -4,13 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e1669cca-9564-4b77-9e21-19c843e7d415" name="Changes" comment="Added FloatingMenuTest">
-      <change afterPath="$PROJECT_DIR$/src/test/java/LoginAndLogoutTest.java" afterDir="false" />
+    <list default="true" id="e1669cca-9564-4b77-9e21-19c843e7d415" name="Changes" comment="Added LoginAndLogoutTest with multiple test cases.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/data/CommonStrings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data/CommonStrings.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/data/Locators.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data/Locators.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/HomePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/util/BaseActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/util/BaseActions.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -192,7 +188,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682690448920</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Added LoginAndLogoutTest with multiple test cases.">
+      <created>1683116059460</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1683116059460</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -216,6 +219,7 @@
     <MESSAGE value="Added EntryAdTest, HiddenElementTest, NonExistingElementTest and MoveMouseOutsideViewportTest" />
     <MESSAGE value="Added FileUploadTest and UploadAndCheckDownloadsTest" />
     <MESSAGE value="Added FloatingMenuTest" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added FloatingMenuTest" />
+    <MESSAGE value="Added LoginAndLogoutTest with multiple test cases." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added LoginAndLogoutTest with multiple test cases." />
   </component>
 </project>

@@ -168,6 +168,16 @@ public class BaseActions {
         element = waitForElementToBeVisible(locator);
         element.click();
     }
+    // Types to Element
+    protected void typeToElement(By locator, String text) {
+        waitForElementToBeVisible(locator).sendKeys(text);
+    }
+    // Clears and types to Element
+    protected void clearAndTypeToElement(By locator, String text) {
+        element = waitForElementToBeVisible(locator);
+        element.clear();
+        element.sendKeys(text);
+    }
     // Uploads a file
     protected void uploadToElement(By locator, String path) {
         waitForElementToBeVisible(locator).sendKeys(path);

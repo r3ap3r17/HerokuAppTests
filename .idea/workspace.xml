@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e1669cca-9564-4b77-9e21-19c843e7d415" name="Changes" comment="Added FileUploadTest and UploadAndCheckDownloadsTest">
-      <change afterPath="$PROJECT_DIR$/src/test/java/FloatingMenuTest.java" afterDir="false" />
+    <list default="true" id="e1669cca-9564-4b77-9e21-19c843e7d415" name="Changes" comment="Added FloatingMenuTest">
+      <change afterPath="$PROJECT_DIR$/src/test/java/LoginAndLogoutTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/data/CommonStrings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data/CommonStrings.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/data/Locators.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data/Locators.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/HomePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/util/BaseActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/util/BaseActions.java" afterDir="false" />
@@ -54,7 +55,7 @@
       <recent name="F:\Coding_Projects\software_testing\qa projects\HerokuAppTests\src\main\java\data" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.FloatingMenuTest">
+  <component name="RunManager" selected="TestNG.LoginAndLogoutTest">
     <configuration name="FileUploadTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="HerokuAppTests" />
       <option name="PACKAGE_NAME" value="" />
@@ -77,10 +78,10 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MoveMouseOutsideViewportTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="LoginAndLogoutTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="HerokuAppTests" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="MoveMouseOutsideViewportTest" />
+      <option name="MAIN_CLASS_NAME" value="LoginAndLogoutTest" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -111,11 +112,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.LoginAndLogoutTest" />
         <item itemvalue="TestNG.FloatingMenuTest" />
         <item itemvalue="TestNG.UploadAndCheckDownloadsTest" />
         <item itemvalue="TestNG.&lt;default&gt;" />
         <item itemvalue="TestNG.FileUploadTest" />
-        <item itemvalue="TestNG.MoveMouseOutsideViewportTest" />
       </list>
     </recent_temporary>
   </component>
@@ -184,7 +185,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682686535148</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Added FloatingMenuTest">
+      <created>1682690448920</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1682690448920</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -207,6 +215,7 @@
     <MESSAGE value="Added ContextMenuTest" />
     <MESSAGE value="Added EntryAdTest, HiddenElementTest, NonExistingElementTest and MoveMouseOutsideViewportTest" />
     <MESSAGE value="Added FileUploadTest and UploadAndCheckDownloadsTest" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added FileUploadTest and UploadAndCheckDownloadsTest" />
+    <MESSAGE value="Added FloatingMenuTest" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added FloatingMenuTest" />
   </component>
 </project>

@@ -53,4 +53,11 @@ public class Locators {
     // https://the-internet.herokuapp.com/floating_menu
     public static final By testTitleLocator = By.xpath("//h3[normalize-space()='Floating Menu']");
     public static final By floatingMenu = By.xpath("//div[@id='menu']");
+
+    // https://the-internet.herokuapp.com/login
+    public static final By usernameInput = By.xpath("//input[@id='username']");
+    public static final By passwordInput = By.xpath("//input[@id='password']");
+    public static final By submitFormButton = By.xpath("//form[@id='login']//button[@type='submit']");
+    public static final By alertMessage = By.xpath("//div[@id='flash']");
+    public static final By logoutButton = By.xpath("//a[@href='/logout']");
 }

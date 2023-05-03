@@ -180,4 +180,40 @@ public class HomePage extends BaseActions {
         Assert.assertFalse(isElementVisibleAfterScrollingToBottom(Locators.testTitleLocator));
         Assert.assertTrue(isElementVisibleAfterScrollingToBottom(Locators.floatingMenu));
     }
+
+    // Fills out form
+    private void submitForm(String username, String password) {
+        clearAndTypeToElement(Locators.usernameInput, username);
+        comment("user typed username");
+        clearAndTypeToElement(Locators.passwordInput, password);
+        comment("user typed password");
+        clickElement(Locators.submitFormButton);
+        comment("user clicked submit button");
+    }
+    // Checks if alert message is correct
+    private void checkAlertMessage(String message) {
+        Assert.assertTrue(getTextFromElement(Locators.alertMessage).contains(message));
+    }
+
+    // Fills out form with wrong username
+    public void testFormWrongUsername() {
+        submitForm(CommonStrings.USERNAME + "123", CommonStrings.PASSWORD);
+        checkAlertMessage(CommonStrings.USERNAME_ERROR_MESSAGE);
+    }
+    // Fills out form with wrong password
+    public void testFormWrongPassword() {
+        submitForm(CommonStrings.USERNAME, CommonStrings.PASSWORD + "123");
+        checkAlertMessage(CommonStrings.PASSWORD_ERROR_MESSAGE);
+    }
+    // Fills out form with Correct credentials
+    public void testFormSuccessful() {
+        submitForm(CommonStrings.USERNAME, CommonStrings.PASSWORD);
+        checkAlertMessage(CommonStrings.SUCCESS_MESSAGE);
+    }
+    // Logins, then logs out
+    public void testLogout() {
+        testFormSuccessful();
+        clickElement(Locators.logoutButton);
+        checkAlertMessage(CommonStrings.LOGOUT_MESSAGE);
+    }
 }
